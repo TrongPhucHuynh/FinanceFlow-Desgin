@@ -1,0 +1,96 @@
+.blog {
+    .hero {
+        --paddingSection: 202px;
+        padding-top: var(--paddingSection);
+        padding-bottom: 92px;
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .description {
+                max-width: 568px;
+            }
+        }
+
+        &__box {
+            margin-top: 46px;
+
+            .box-product {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: var(--gap);
+                align-items: center;
+
+                .left {
+                    margin-left: 47px;
+                    padding: 24px 24px 36px 23px;
+
+
+                    .heading {
+                        margin-top: 21px;
+
+                        a {
+                            font-size: var(--fs-h1-blog);
+                            line-height: var(--lh-h1-blog);
+                            letter-spacing: var(--ls-h1-blog);
+                            font-family: db;
+                            max-width: 487px;
+                            color: var(--while-color);
+                        }
+                    }
+
+                    .description {
+                        margin-top: 16px;
+                        max-width: 463px;
+                    }
+
+                }
+
+                .right {
+                    width: 100%;
+                    aspect-ratio: 586/334;
+                    position: relative;
+
+                    img {
+                        @include midimg;
+                    }
+                }
+
+                &.--mobile {
+                    display: none;
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+
+        @include sm {
+            --paddingSection: 120px;
+
+            @include xs {
+                .hero__content {
+                    flex-direction: column;
+                    align-items: initial;
+
+                    .description {
+                        margin-top: 16px;
+                        max-width: 320px;
+                    }
+                }
+            }
+
+            .box-product {
+                display: none;
+
+                &.--mobile {
+                    display: grid;
+                }
+            }
+
+        }
+    }
+
+
+}

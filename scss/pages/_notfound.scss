@@ -1,0 +1,80 @@
+.notfound {
+    .hero {
+        --paddingSection: 280px;
+        padding-top: var(--paddingSection);
+
+        .blur {
+            // @include mid;
+            opacity: 0.5;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+
+            .blur-notfound {
+                @include mid;
+                width: 200%;
+                height: 300%;
+            }
+        }
+
+        &__content {
+            text-align: center;
+
+            .number {
+                font-size: 180px;
+                font-family: db;
+                color: var(--main-color);
+            }
+
+            .title-content {
+                margin-top: 60px;
+            }
+
+            .description {
+                max-width: 557px;
+                margin: auto;
+                margin-top: 16px;
+            }
+        }
+
+        &__btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+
+            .btn-main {
+                &.--bggrey {
+                    margin-left: 24px;
+                }
+            }
+
+        }
+
+        @include sm {
+            --paddingSection: 180px;
+
+            .blur {
+                display: none;
+            }
+
+            .number {
+                font-size: 120px;
+            }
+
+            .hero__btn {
+                flex-direction: column;
+
+
+                .btn-main {
+                    width: 100%;
+                    margin: auto;
+
+                    &.--bggrey {
+                        margin-top: 16px;
+                    }
+                }
+            }
+        }
+
+    }
+}

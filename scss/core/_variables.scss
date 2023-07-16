@@ -1,0 +1,151 @@
+:root {
+    // gap, maxwidth of page, container-fluid, container
+    --gap: 26px;
+
+    --max-width-page: 2560px;
+    --max-width-container: calc(1196px + calc(var(--gap) * 2));
+
+    --width-container: 1196px;
+    --padding-container: calc((100vw - var(--max-width-container) - 15px) / 2);
+
+    // Color
+    --main-color: #0328EE;
+    --while-color: #FFFFFF;
+    --dark-blue-color: #010725;
+    --blue-color: #010D50;
+    --grey: rgba(255, 255, 255, 0.1);
+    --border-radius: 40px;
+
+    --blue-color-hover: #031FB4; //Font-size Lineheight Text
+    --fs-h1: 6.6rem;
+    --lh-h1: 8rem;
+    --ls-h1: -0.1rem;
+
+    --fs-h2: 4.2rem;
+    --lh-h2: 5.5rem;
+    --ls-h2: normal;
+
+    --fs-lable: 1.8rem;
+    --lh-lable: 2.6rem;
+    --ls-lable: 0.09rem;
+
+    --fs-text-btn: 1.6rem;
+    --lh-text-btn: 1.6rem;
+    --ls-text-btn: 0.16rem;
+
+    --fs-body-text: 1.8rem;
+    --lh-body-text: 3.2rem;
+    --ls-body-text: normal;
+
+    --fs-body-text-small: 1.6rem;
+    --lh-body-text-small: 2.6rem;
+    --ls-body-text-small: normal;
+
+    --fs-text-menu: 1.4rem;
+    --lh-text-menu: 1.6rem;
+    --ls-text-menu: 0.14rem;
+
+    --fs-text-tag: 1.4rem;
+    --lh-text-tag: 1.8rem;
+    --ls-text-tag: 0.07rem;
+
+
+    --fs-h1-token: 1.8rem;
+    --lh-h1-token: 2rem;
+    --ls-h1-token: normal;
+
+    --fs-h2-token: 1.6rem;
+    --lh-h2-token: 1.8rem;
+    --ls-h2-token: 0.1rem;
+
+    --fs-btn-token: 1.2rem;
+    --lh-btn-token: 1.2rem;
+    --ls-btn-token: 0.06rem;
+
+    --fs-h1-blog: 2.8rem;
+    --lh-h1-blog: 4rem;
+    --ls-h1-blog: 0.06rem;
+
+    --fs-h3-blogpost: 2.8rem;
+    --lh-h3-blogpost: 3rem;
+    --ls-h3-blogpost: 0.0028rem;
+
+
+    --fs-accordion: 2.8rem;
+    --lh-accordion: 3.2rem;
+    --ls-accordion: normal;
+
+    --fs-directly: 2.2rem;
+    --lh-directly: 3.1rem;
+    --ls-directly: normal;
+
+    //General
+    --height-header: 132px;
+    // --height-btn: 44px;
+    // --pd-section: 120px;
+
+    // Timing
+    --duration: 0.5s;
+    --cubic: cubic-bezier(0.59, 0.29, 0.15, 0.93);
+
+    // Responsive
+    @include lg {
+        --max-width-container: 1198px;
+        --paddingSection: 20px;
+    }
+
+    @include md {
+        --max-width-container: 1140px;
+        --paddingSection: 20px;
+    }
+
+    @include sm {
+        --max-width-container: 960px;
+        --paddingSection: 20px;
+    }
+
+    @include xs {
+        --max-width-container: 100%;
+        --gap: 15px;
+
+        --height-header: 73px;
+        --paddingSection: 15px;
+
+        --fs-h1: 3.8rem;
+        --lh-h1: 4.6rem;
+        --ls-h1: -0.1rem;
+
+        --fs-h2: 2.8rem;
+        --lh-h2: 3.6rem;
+        --ls-h2: normal;
+
+        --fs-lable: 1.4rem;
+        --lh-lable: 1.8rem;
+        --ls-lable: 0.07rem;
+
+        --fs-text-btn: 1.6rem;
+        --lh-text-btn: 1.6rem;
+        --ls-text-btn: 0.16rem;
+
+        --fs-body-text: 1.6rem;
+        --lh-body-text: 2.6rem;
+        --ls-body-text: normal;
+
+        --fs-body-text-small: 1.6rem;
+        --lh-body-text-small: 2.6rem;
+        --ls-body-text-small: normal;
+
+        --fs-text-menu: 1.4rem;
+        --lh-text-menu: 100%;
+        --ls-text-menu: 0.14rem;
+
+        --fs-text-tag: 1.4rem;
+        --lh-text-tag: 1.8rem;
+        --ls-text-tag: 0.07rem;
+    }
+
+    @include xxs {
+        --max-width-container: 100%;
+    }
+
+}

@@ -1,0 +1,57 @@
+html {
+    font-size: 62.5%; // 1rem = 10px
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    width: 100%;
+    max-width: var(--max-width-page);
+    margin: auto;
+    scroll-behavior: smooth;
+    font-family: dr;
+    font-size: var(--fs-body-text);
+    line-height: var(--lh-body-text);
+    letter-spacing: var(--ls-body-text);
+    color: var(--while-color);
+    background: var(--dark-blue-color);
+    overflow-x: hidden;
+
+    &.--disable-scroll {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    // .container-fluid {
+    //     width: 100%;
+    //     max-width: var(--max-width-container-fluid);
+    //     padding-right: var(--gap);
+    //     padding-left: var(--gap);
+    //     margin-right: auto;
+    //     margin-left: auto;
+    //     position: relative;
+    // }
+    .container {
+        width: 100%;
+        max-width: var(--max-width-container);
+        padding-right: var(--gap);
+        padding-left: var(--gap);
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+    }
+
+    .main {
+        position: relative;
+
+        // section {
+        //     padding: var(--pd-section) 0;
+        // }
+    }
+}

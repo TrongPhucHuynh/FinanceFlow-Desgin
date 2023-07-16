@@ -1,0 +1,97 @@
+.blogpost {
+    .hero {
+        --paddingSection: 165px;
+        padding-top: var(--paddingSection);
+        padding-bottom: 126px;
+
+        &__content {
+            padding-left: 102px;
+
+            .author {
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+
+            .title-content {
+                max-width: 568px;
+                margin-top: 40px;
+            }
+
+            .description {
+                margin-top: 13px;
+            }
+        }
+
+        &__img {
+            margin-top: 30px;
+
+            &-content {
+                max-width: 787px;
+                margin: auto;
+                margin-top: 64px;
+
+                .description {
+                    .bold {
+                        font-family: db;
+                    }
+
+                    .underlined {
+                        text-decoration-line: underline;
+                    }
+                }
+
+                .item1 {
+                    margin-top: 40px;
+                }
+
+                .item2,
+                .item4 {
+                    margin-top: 16px;
+                }
+
+                .item3 {
+                    margin-top: 24px;
+                }
+
+                .heading-content {
+                    margin-top: 40px;
+                }
+            }
+
+            .img-nature {
+                margin: auto;
+                margin-top: 64px;
+            }
+
+            .text-box {
+
+                background: var(--blue-color);
+                padding: 80px 68px;
+                border-radius: var(--border-radius);
+
+                .description {
+                    max-width: 500px;
+                    margin: auto;
+                }
+            }
+        }
+
+        @include xs {
+            --paddingSection: 80px;
+
+            .hero__content {
+                padding-left: initial;
+                max-width: 358px;
+
+                .title-content {
+                    font-size: var(--fs-h2);
+                    line-height: var(--lh-h2);
+                    letter-spacing: var(--ls-h2);
+                    margin-top: 32px;
+                }
+            }
+        }
+    }
+}

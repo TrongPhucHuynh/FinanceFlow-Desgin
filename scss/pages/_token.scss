@@ -1,0 +1,177 @@
+.token {
+
+    .money {
+        --paddingSection: 192px;
+        padding-top: var(--paddingSection);
+        padding-bottom: 160px;
+
+        &__content {
+            text-align: center;
+
+            .description {
+                max-width: 568px;
+                margin: auto;
+                margin-top: 16px;
+            }
+        }
+
+        &__item {
+            margin-top: 120px;
+
+            .rows {
+                display: flex;
+                position: relative;
+
+                &.head {
+                    text-transform: uppercase;
+                    font-size: var(--fs-h2-token);
+                    line-height: var(--lh-h2-token);
+                    letter-spacing: var(--ls-h2-token);
+                    font-family: db;
+                }
+
+                .column {
+                    padding: 40px 0;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    h3 {
+                        text-transform: uppercase;
+                        font-size: var(--fs-h1-token);
+                        line-height: var(--lh-h1-token);
+                        letter-spacing: var(--ls-h1-token);
+                        font-family: db;
+                        display: none;
+                    }
+
+                    span {
+                        font-size: var(--fs-body-text-smal);
+                        line-height: var(--lh-body-text-small);
+                        letter-spacing: var(--ls-body-text-small);
+                        font-family: db;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background: var(--grey);
+                        position: absolute;
+                        bottom: 0px;
+                    }
+
+                    .text {
+                        color: var(--while-color);
+                        font-family: db;
+                        font-size: var(--fs-h2-token);
+                        line-height: var(--lh-h2-token);
+                        letter-spacing: var(--ls-h2-token);
+                        margin-left: 16px;
+                    }
+
+                    .btn-token {
+                        margin-left: 16px;
+                    }
+                }
+
+                .column:nth-child(1) {
+                    width: 300px;
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                .column:nth-child(2) {
+                    width: 300px;
+                }
+
+                .column:nth-child(3) {
+                    width: 240px;
+                    display: flex;
+                }
+
+                .column:nth-child(4) {
+                    width: 240px;
+                }
+
+                .column:nth-child(5) {
+                    width: 120px;
+                    position: relative;
+
+                    a {
+                        color: var(--while-color);
+                        font-family: dr;
+                        font-size: var(--fs-h2-token);
+                        line-height: var(--lh-h2-token);
+                        letter-spacing: var(--ls-h2-token);
+                        position: relative;
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background-color: var(--while-color);
+                            // bottom: 55px;
+                            left: 0;
+                            bottom: -10px;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        @include sm {
+            --paddingSection: 120px;
+
+            .money__content {
+                text-align: left;
+
+                .description {
+                    max-width: 320px;
+                    margin: initial;
+                    margin-top: 16px;
+                }
+            }
+
+            .money__item {
+                margin-top: 50px;
+
+                .rows {
+                    display: block;
+
+                    .column {
+                        flex-direction: column;
+                        align-items: initial;
+                        width: 100%;
+
+                        h3 {
+                            display: block;
+                        }
+
+                        p,
+                        span,
+                        a,
+                        .item {
+                            margin-top: 16px;
+                        }
+
+                        a {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .head {
+                    display: none;
+                }
+            }
+        }
+    }
+}

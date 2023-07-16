@@ -1,0 +1,305 @@
+.contact {
+    .touch {
+        --paddingSection: 212px;
+        padding-top: var(--paddingSection);
+
+        // .blur-contact {
+        //     position: relative;
+
+        //     img {
+        //         position: absolute;
+        //         right: -500px;
+        //         bottom: -500px;
+        //         pointer-events: none;
+        //         z-index: -1;
+        //         opacity: 0.6;
+        //     }
+
+        //     @include sm {
+        //         display: none;
+        //     }
+        // }
+
+        &__form {
+            display: flex;
+            margin-top: 52px;
+
+            .form-contact {
+                display: flex;
+
+                .form-input {
+                    display: flex;
+                    flex-direction: column;
+
+                    &.left {
+                        margin-left: 25px;
+                    }
+
+                    label {
+                        font-family: db;
+                        margin-top: 32px;
+
+                        &.left {
+                            margin-top: initial;
+                        }
+                    }
+
+                    input {
+                        margin-top: 12px;
+                        width: 364px;
+                        height: 68px;
+                        background-color: var(--blue-color);
+                        border-radius: var(--border-radius);
+                        border: none;
+                        outline: none;
+                        color: var(--while-color);
+                        font-size: var(--fs-body-text-small);
+                        line-height: var(--lh-body-text-small);
+                        letter-spacing: var(--ls-body-text-small);
+                        padding: 0 25px;
+                        font-family: dr;
+
+                        input:-webkit-autofill,
+                        input:-webkit-autofill:hover,
+                        input:-webkit-autofill:focus,
+                        textarea:-webkit-autofill,
+                        textarea:-webkit-autofill:hover,
+                        textarea:-webkit-autofill:focus,
+                        select:-webkit-autofill,
+                        select:-webkit-autofill:hover,
+                        select:-webkit-autofill:focus {
+                            border: 1px solid green;
+                            -webkit-text-fill-color: green;
+                            -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+                            transition: background-color 5000s ease-in-out 0s;
+                        }
+
+                        &.message {
+                            width: 753px;
+                            height: 162px;
+
+                            &::placeholder {
+                                position: absolute;
+                                top: 20px;
+                            }
+                        }
+
+                        &::placeholder {
+                            color: var(--while-color);
+                            font-size: var(--fs-body-text-small);
+                            line-height: var(--lh-body-text-small);
+                            letter-spacing: var(--ls-body-text-small);
+                            font-family: dr;
+                        }
+                    }
+
+                    input:focus {
+                        @include transition(0.4s);
+                        border: 1px var(--main-color) solid;
+                    }
+
+                    input[type="text"]:hover {
+                        @include transition(0.4s);
+                        border: 1px var(--while-color) solid;
+                    }
+
+                    small {
+                        font-size: 13px;
+                        font-family: dr;
+                        color: red;
+                        display: none;
+
+                    }
+
+                    &.error {
+                        small {
+                            display: block;
+                        }
+
+                        input {
+                            border: 2px red solid;
+                        }
+                    }
+                }
+
+
+                .form-text {
+                    grid-column: 8/13;
+                }
+            }
+
+            .form-text {
+                padding-left: 63px;
+
+                .content {
+                    .title-content {
+                        font-size: var(--fs-directly);
+                        line-height: var(--lh-directly);
+                        letter-spacing: var(--ls-directly);
+                        font-family: db;
+                    }
+
+                    .description {
+                        margin-top: 12px;
+                    }
+                }
+
+                .email {
+                    margin-top: 32px;
+
+                    .logo-email {
+                        display: flex;
+
+                        span {
+                            margin-left: 15px;
+                            font-family: dm;
+                        }
+                    }
+
+                    .logo-email:not(:first-child) {
+                        margin-top: 24px;
+                    }
+                }
+            }
+
+        }
+
+        .btn-main {
+            margin-top: 52px;
+        }
+
+        @include sm {
+            --paddingSection: 120px;
+
+            .touch__form {
+                flex-direction: column;
+            }
+
+            .contactform {
+
+                .form-contact {
+                    flex-direction: column;
+
+                    .form-input {
+                        &.left {
+                            margin-left: initial;
+                            margin-top: 32px;
+
+                            label {
+                                margin-top: initial;
+                            }
+                        }
+
+                        input {
+                            width: 100%;
+
+                            &.message {
+                                width: 100%;
+
+                            }
+                        }
+
+                    }
+                }
+
+                .btn-main {
+                    margin-top: 32px;
+                    width: 100%;
+                }
+            }
+
+            .form-text {
+                padding-left: initial;
+                margin-top: 48px;
+
+                .description {
+                    max-width: 358px;
+                }
+            }
+        }
+    }
+
+    .faqs {
+        --paddingSection: 120px;
+        padding: var(--paddingSection) 0;
+
+
+        .heading-content {
+            .title-content {
+                text-align: center;
+            }
+        }
+
+        .accordion {
+            width: 875px;
+            margin: auto;
+            margin-top: 80px;
+
+            .label {
+                position: relative;
+                padding: 10px 0;
+                font-size: var(--fs-accordion);
+                line-height: var(--lh-accordion);
+                letter-spacing: var(--ls-accordion);
+                font-family: db;
+                cursor: pointer;
+
+                &::before {
+                    content: '+';
+                    position: absolute;
+                    top: 50%;
+                    right: -5px;
+                    font-size: 30px;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .content {
+                position: relative;
+                height: 0;
+                text-align: justify;
+                overflow: hidden;
+                @include transition(0.5s);
+                margin-top: 16px;
+                @include transition(all 0.7s);
+                font-size: var(--fs-body-tex);
+                line-height: var(--lh-body-text);
+                letter-spacing: var(--ls-body-text);
+                font-family: dr;
+            }
+        }
+
+        hr {
+            width: 100%;
+            margin-left: 0;
+            border: 1px solid var(--grey);
+        }
+
+        .accordion-content.active .content {
+            height: 94px;
+            @include transition(all 0.7s);
+        }
+
+        .accordion-content.active .label::before {
+            content: '-';
+            font-size: 30px;
+        }
+
+        @include sm {
+            --paddingSection: 80px;
+
+            .accordion {
+                width: 650px;
+            }
+        }
+
+        @include xxs {
+            .accordion {
+                width: 358px;
+                margin-top: 32px;
+            }
+        }
+    }
+
+    /* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+}

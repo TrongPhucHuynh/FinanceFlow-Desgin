@@ -1,0 +1,91 @@
+.pricing {
+    .hero {
+        --paddingSection: 172px;
+        padding-top: var(--paddingSection);
+        padding-bottom: 225px;
+
+        .hero__content {
+            text-align: center;
+
+            .description {
+                max-width: 568px;
+                margin: auto;
+                margin-top: 16px;
+            }
+        }
+
+        &__item {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+
+            &-text {
+                display: flex;
+                align-items: center;
+
+                p {
+                    margin-left: 24px;
+                }
+            }
+        }
+
+        &__box {
+            margin-top: 56px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--gap);
+        }
+
+        @include xs {
+            --paddingSection: 120px;
+            padding-bottom: 80px;
+
+            .hero__content {
+                text-align: left;
+
+                .description {
+                    max-width: 320px;
+                    margin: initial;
+                    margin-top: 16px;
+
+                }
+            }
+
+
+        }
+
+        @include sm {
+            .hero__item {
+                flex-direction: column;
+
+                &-text:not(:first-child) {
+                    margin-top: 36px;
+                }
+            }
+
+            .hero__box {
+                display: initial;
+
+                .box-hero {
+                    .description {
+                        max-width: 298px;
+                    }
+
+                    .btn-main {
+                        max-width: initial;
+
+                    }
+                }
+
+                .box-hero:nth-child(1) {
+                    margin-top: 48px;
+                }
+
+                .box-hero:not(:first-child) {
+                    margin-top: 16px;
+                }
+
+            }
+        }
+    }
+}
